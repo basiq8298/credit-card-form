@@ -1,0 +1,64 @@
+﻿@model List<WebApplication8.ViewModel.UserjoinCard>
+@{
+    ViewData["Title"] = "join";
+}
+
+
+<h2>join</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <b>Name</b>
+            </th>
+            <th>
+                <b>Gender</b>
+            </th>
+            <th>
+                <b>Dob</b>
+            </th>
+            <th>
+                <b>Card ID</b>
+            </th>
+            <th>
+                <b>Card Number</b>
+            </th>
+            <th>
+                <b>CreditLimt</b>
+            </th>
+            <th>
+                <b>MailingAddress</b>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.user.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cards.CardId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cards.CardNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cards.CreditLimt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cards.MailingAddress)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,45 @@
+﻿@model WebApplication8.Models.CreditCard
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CreditCard</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CardNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CardNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MailingAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MailingAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditLimt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreditLimt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Name)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CardId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
